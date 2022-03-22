@@ -11,93 +11,88 @@ using System.Threading.Tasks;
 namespace Bondx.Extensions.RST.Mediator
 {
     [ExcludeFromCodeCoverage]
-    public class RstBaseRequestHandler
+    public class BaseRequestHandler
     {
-
-        protected RstBaseRequestHandler() { }
-
-       
+        protected BaseRequestHandler() { }
     }
 
     [ExcludeFromCodeCoverage]
-    public abstract class RstRequestHandler : RstBaseRequestHandler
+    public abstract class RSTRequestHandler : BaseRequestHandler
     {
-        protected RstRequestHandler() : base() { }
+        protected RSTRequestHandler() : base() { }
 
- 
-
-        protected virtual RSTActionResult<T> RstOk<T>(T data)
+        protected virtual RSTActionResult<T> Ok<T>(T data)
         {
             return new RSTActionResult<T>(HttpStatusCode.OK, data);
         }
 
-        protected virtual RSTActionResult RstOk()
+        protected virtual RSTActionResult Ok()
         {
             return new RSTActionResult(HttpStatusCode.OK);
         }
 
-        protected virtual RSTActionResult RstNoContent()
+        protected virtual RSTActionResult NoContent()
         {
             return new RSTActionResult(HttpStatusCode.NoContent);
         }
 
-        protected virtual RSTActionResult RstUnauthorized()
+        protected virtual RSTActionResult Unauthorized()
         {
             return new RSTActionResult(HttpStatusCode.Unauthorized);
         }
 
-        protected virtual RSTActionResult RstNotFoundObject(string errorMessage)
+        protected virtual RSTActionResult NotFoundObject(string errorMessage)
         {
             return new RSTActionResult(HttpStatusCode.NotFound, errorMessage);
         }
 
-        protected virtual RSTActionResult<T> RstNotFoundObject<T>(T notFoundObject)
+        protected virtual RSTActionResult<T> NotFoundObject<T>(T notFoundObject)
         {
             return new RSTActionResult<T>(HttpStatusCode.NotFound, notFoundObject);
         }
 
-        protected virtual RSTActionResult RstCreated()
+        protected virtual RSTActionResult Created()
         {
             return new RSTActionResult(HttpStatusCode.Created);
         }
 
-        protected virtual RSTActionResult RstBadRequest(IList<RSTActionError> errors)
+        protected virtual RSTActionResult BadRequest(IList<RSTActionError> errors)
         {
             return new RSTActionResult(HttpStatusCode.BadRequest, errors);
         }
 
-        protected virtual RSTActionResult RstBadRequest(string error)
+        protected virtual RSTActionResult BadRequest(string error)
         {
             return new RSTActionResult(HttpStatusCode.BadRequest, new List<RSTActionError>() { new RSTActionError((int)HttpStatusCode.BadRequest, error) });
         }
 
-        protected virtual RSTActionResult<T> RstCreated<T>(T value)
+        protected virtual RSTActionResult<T> Created<T>(T value)
         {
             return new RSTActionResult<T>(HttpStatusCode.Created, value);
         }
 
-        protected virtual RSTActionResult<T> RstAccepted<T>(T value)
+        protected virtual RSTActionResult<T> Accepted<T>(T value)
         {
             return new RSTActionResult<T>(HttpStatusCode.Accepted, value);
         }
 
-        protected virtual RSTActionResult RstAccepted()
+        protected virtual RSTActionResult Accepted()
         {
             return new RSTActionResult(HttpStatusCode.Accepted);
         }
 
-        protected virtual RSTActionResult RstServiceResponse<T>(RSTActionResult<T> response)
+        protected virtual RSTActionResult ServiceResponse<T>(RSTActionResult<T> response)
         {
             return new RSTActionResult(response.Status, response.AsError());
         }
     }
 
     [ExcludeFromCodeCoverage]
-    public abstract class RstRequestHandler<TRequest, TResponse> : RstRequestHandler, IRequestHandler<TRequest, RSTActionResult<TResponse>>
+    public abstract class RSTRequestHandler<TRequest, TResponse> : RSTRequestHandler, IRequestHandler<TRequest, RSTActionResult<TResponse>>
         where TRequest : RSTRequest<TResponse>
     {
 
-        public RstRequestHandler() : base() { }
+        public RSTRequestHandler() : base() { }
 
         async Task<RSTActionResult<TResponse>> IRequestHandler<TRequest, RSTActionResult<TResponse>>.Handle(TRequest request, CancellationToken cancellationToken)
         {
@@ -108,9 +103,9 @@ namespace Bondx.Extensions.RST.Mediator
     }
 
     [ExcludeFromCodeCoverage]
-    public abstract class RstRequestHandler<TRequest> : RstRequestHandler, IRequestHandler<TRequest, RSTActionResult> where TRequest : RSTRequest
+    public abstract class RSTRequestHandler<TRequest> : RSTRequestHandler, IRequestHandler<TRequest, RSTActionResult> where TRequest : RSTRequest
     {
-        public RstRequestHandler() : base() { }
+        public RSTRequestHandler() : base() { }
 
         async Task<RSTActionResult> IRequestHandler<TRequest, RSTActionResult>.Handle(TRequest request, CancellationToken cancellationToken)
         {
