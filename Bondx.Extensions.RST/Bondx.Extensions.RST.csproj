@@ -1,7 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RepositoryUrl>https://github.com/Gabina12/Bondx.Extensions.RST</RepositoryUrl>
+    <PackageTags>rest-api-response; respone-model; response;</PackageTags>
+    <Description>Model for rest responses</Description>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
