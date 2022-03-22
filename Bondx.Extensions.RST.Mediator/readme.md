@@ -17,7 +17,7 @@ after that you can add Request
     }
     
 ### RequestHandler
-    public class GetWeatherForecastQueryHandler : RstRequestHandler<GetWeatherForecastQuery, IEnumerable<WeatherForecast>>
+    public class GetWeatherForecastQueryHandler : RSTRequestHandler<GetWeatherForecastQuery, IEnumerable<WeatherForecast>>
     {
         private static readonly string[] Summaries = new[]
         {
@@ -33,6 +33,6 @@ after that you can add Request
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             });
-            return RstOk(weather);
+            return Ok(weather); //BadRequest("error_text")
         }
     }
