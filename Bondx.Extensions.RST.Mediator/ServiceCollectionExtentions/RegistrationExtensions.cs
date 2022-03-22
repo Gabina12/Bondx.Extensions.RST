@@ -14,8 +14,7 @@ namespace Microsoft.Extensions.DependencyInjection
     [ExcludeFromCodeCoverage]
     public static class RegistrationExtensions
     {
-
-        private static IServiceCollection AddRSTApiMediatRExplorer(this IServiceCollection services, params Assembly[] assemblies)
+        public static IServiceCollection AddRSTApiMediatRExplorer(this IServiceCollection services, params Assembly[] assemblies)
         {
             var mediatorDescriptor = ServiceDescriptor.Transient<IMediator, HttpContextMediator>(provider => new HttpContextMediator(
                 new MediatR.Mediator(provider.GetRequiredService<ServiceFactory>()), provider.GetRequiredService<IHttpContextAccessor>(),
