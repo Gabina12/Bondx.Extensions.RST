@@ -5,7 +5,8 @@
     <RepositoryUrl>https://github.com/Gabina12/Bondx.Extensions.RST</RepositoryUrl>
     <PackageTags>rest-api-response; respone-model; response;</PackageTags>
     <Description>Model for rest responses</Description>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,5 +16,13 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+	
 
 </Project>
