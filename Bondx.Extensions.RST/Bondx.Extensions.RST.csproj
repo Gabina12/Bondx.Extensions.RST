@@ -5,7 +5,7 @@
     <RepositoryUrl>https://github.com/Gabina12/Bondx.Extensions.RST</RepositoryUrl>
     <PackageTags>rest-api-response; respone-model; response;</PackageTags>
     <Description>Model for rest responses</Description>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
 

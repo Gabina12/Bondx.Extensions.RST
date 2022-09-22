@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
     <Description>Mediator wrapper for setting Cancelation tokens in handlers</Description>
     <RepositoryUrl>https://github.com/Gabina12/Bondx.Extensions.RST</RepositoryUrl>
     <PackageTags>mediator; mediator-cancelation-tokens</PackageTags>
