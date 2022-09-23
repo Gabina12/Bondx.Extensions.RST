@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bondx.Extensions.RST", "Bondx.Extensions.RST\Bondx.Extensions.RST.csproj", "{BF80A0A7-8398-44FA-ACF7-2697C524C485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bondx.Extensions.RST", "Bondx.Extensions.RST\Bondx.Extensions.RST.csproj", "{BF80A0A7-8398-44FA-ACF7-2697C524C485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bondx.Extensions.RST.Mediator", "Bondx.Extensions.RST.Mediator\Bondx.Extensions.RST.Mediator.csproj", "{0B9881DC-BB8E-4742-9C73-53ACA03781AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bondx.Extensions.RST.Mediator", "Bondx.Extensions.RST.Mediator\Bondx.Extensions.RST.Mediator.csproj", "{0B9881DC-BB8E-4742-9C73-53ACA03781AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bondx.Extensions.RST.ApiEndpoints", "Bondx.Extensions.RST.ApiEndpoints\Bondx.Extensions.RST.ApiEndpoints.csproj", "{AA9EC0B2-4B93-4E43-BEB5-AA530A530ECD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0B9881DC-BB8E-4742-9C73-53ACA03781AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B9881DC-BB8E-4742-9C73-53ACA03781AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B9881DC-BB8E-4742-9C73-53ACA03781AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA9EC0B2-4B93-4E43-BEB5-AA530A530ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA9EC0B2-4B93-4E43-BEB5-AA530A530ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA9EC0B2-4B93-4E43-BEB5-AA530A530ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA9EC0B2-4B93-4E43-BEB5-AA530A530ECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

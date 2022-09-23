@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <Nullable>enable</Nullable>
+	  <LangVersion>10</LangVersion>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+</Project>

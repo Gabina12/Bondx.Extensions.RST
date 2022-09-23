@@ -1,11 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Bondx.Extensions.RST.Mediator.RSTOverrides
+namespace Bondx.Extensions.RST.Mediator
 {
     public abstract class RST2RequestHandler
     {
